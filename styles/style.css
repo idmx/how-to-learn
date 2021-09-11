@@ -1,3 +1,9 @@
+div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
+  border: 1px;
+  border-style: solid;
+  border-color: red;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -7,23 +13,20 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #000;
 }
 
 .header {
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   display: flex;
-  background-color: rgb(224, 215, 215);
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
-}
-
 .logo_place_header {
   position: absolute;
   background-image: url(../images/logo_place_header.svg);
@@ -37,9 +40,6 @@
 .header__title {
   align-self: center;
   width: 730px;
-  line-height: 96px;
-  font-size: 102px;
-  font-weight: bold;
   margin-left: 64px;
   z-index:2;
 }
@@ -49,14 +49,12 @@
   width: 388px;
   bottom: 30px;
   left: 64px;
-  line-height: 25px;
-  font-size: 18px;
-  font-weight: normal;
   z-index:2;
 }
 
 .header__link {
   text-decoration: none;
+  color:#2f80ed;
 }
 
 .header__main-illustration {
@@ -74,16 +72,236 @@
   position: absolute;
   width: 568px;
   height: 568px;
-  background-color: rgb(71, 105, 253);
+  background-color: #2f80ed;
   right: 0;
   top: 64px;
   z-index: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 100px;
+}
+
+.two-columns {
+  width: 175px;
+}
+
+.two-columns__brief {
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  margin: 0;
+}
+
+.two-columns__paragraph:nth-child(2) {
+  margin: 30px 0;
+}
+
+.digits {
+  margin-top: 100px;
+}
+
+.section-title {
+  width: 60%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.table {
+  width: 1100px;
+  margin: auto;
+}
+
+.table__row {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.table__cell {
+  width: 250px;
+}
+
+.table__heading {
+  margin-bottom: 20px;
+}
+
+.table__text:last-child {
+  margin: 20px 0 0 0;
+}
+
+.feynman {
+  position: relative;
+  height: 890px;
+  background-color: #f2f2f2;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.feynman__title {
+  position: relative;
+  width: 648px;
+  margin: 100px 0 0 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.feynman_margin {
+  position: relative;
+}
+
+.feynman__subtitle {
+  position: absolute;
+  margin-top: 0;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:2;
+}
+
+.feynman__link {
+  position: absolute;
+  color: #2f80ed;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+}
+
+.feynman__illustration {
+  position: absolute;
+  background-image: url(../images/feynman.png);
+  background-size: cover;
+  width: 867px;
+  height: 637px;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.kaufman {
+  padding: 90px 0;
+  width: 100%;
+  background-color: #1f1f1f;
+}
+
+.section-title_theme_dark {
+  width: 60%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.table_theme_dark {
+  margin: auto;
+}
+
+.table__row_theme_dark {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.font_one {
+  font-size: 24px;
+}
+
+.font_two {
+  font-size: 18px;
+}
+
+.font_three {
+  font-size: 60px;
+}
+
+.font_four {
+  font-size: 36px;
+}
+
+.font_fife {
+  font-size: 15px;
+}
+
+.font_six {
+  font-size: 102px;
+}
+
+.font_seven {
+  font-size: 120px;
+}
+
+.weight_b {
+  font-weight: bold;
+}
+
+.weight_n {
+  font-weight: normal;
+}
+
+.line_one {
+  line-height: 96px;
+}
+
+.line_two {
+  line-height: 1.2;
+}
+
+.line_three {
+  line-height: 25px;
+}
+
+.line_four {
+  line-height: 34px;
+}
+
+.line_five {
+  line-height: 30px;
+}
+
+.line_six {
+  line-height: 1.15;
+}
+
+.line_seven {
+  line-height: 51px;
 }
