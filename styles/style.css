@@ -1,9 +1,3 @@
-div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
-  border: 1px;
-  border-style: solid;
-  border-color: red;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -12,7 +6,7 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   color: #000;
 }
 
@@ -23,15 +17,17 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   max-height: 756px;
   display: flex;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
+  overflow: hidden;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  width: 183px;
+  height: 32px;
+}
+
 .logo_place_header {
   position: absolute;
   background-image: url(../images/logo_place_header.svg);
-  width: 183px;
-  height: 32px;
   top: 30px;
   left: 64px;
   z-index: 2;
@@ -41,7 +37,7 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   align-self: center;
   width: 730px;
   margin-left: 64px;
-  z-index:2;
+  z-index: 2;
 }
 
 .header__subtitle {
@@ -49,12 +45,12 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   width: 388px;
   bottom: 30px;
   left: 64px;
-  z-index:2;
+  z-index: 2;
 }
 
 .header__link {
   text-decoration: none;
-  color:#2f80ed;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
@@ -86,17 +82,21 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
 
 .description {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-top: 100px;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
 }
 
 .two-columns {
-  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .two-columns__brief {
   color: #2f80ed;
+  width: 175px;
+  margin: 0;
 }
 
 .two-columns__main-text {
@@ -113,7 +113,8 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
 }
 
 .digits {
-  margin-top: 100px;
+  padding: 100px 0;
+  width: 100%;
 }
 
 .section-title {
@@ -136,7 +137,6 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
 .table__row {
   display: flex;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
   justify-content: space-between;
   margin-top: 60px;
 }
@@ -146,7 +146,7 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
 }
 
 .table__heading {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .table__text:last-child {
@@ -157,31 +157,19 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   position: relative;
   height: 890px;
   background-color: #f2f2f2;
-  margin-top: 100px;
   width: 100%;
+  z-index: -2;
 }
 
 .feynman__title {
-  position: relative;
   width: 648px;
-  margin: 100px 0 0 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 100px auto 70px auto;
   text-align: center;
-  z-index: 2;
-}
-
-.feynman_margin {
-  position: relative;
 }
 
 .feynman__subtitle {
-  position: absolute;
-  margin-top: 0;
-  top: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index:2;
+  margin: 0;
+  text-align: center;
 }
 
 .feynman__link {
@@ -200,13 +188,17 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
   height: 637px;
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .kaufman {
+  position: relative;
   padding: 90px 0;
+  margin: auto;
   width: 100%;
   background-color: #1f1f1f;
+  z-index: -2;
+  overflow: hidden;
 }
 
 .section-title_theme_dark {
@@ -224,22 +216,93 @@ div, section, header, main, footer, h2, p, table, h3, tr, td, h1{
 }
 
 .table_theme_dark {
-  margin: auto;
+  width: 1100px;
+  margin: 0 auto;
 }
 
 .table__row_theme_dark {
   display: flex;
   flex-direction: row;
-  /*flex-wrap: wrap;*/
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
+  margin: 0;
+}
+
+.table__heading_theme_dark {
+  margin: 0 0 20px;
+}
+
+.table__text_theme_dark {
+  margin: 0;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;
+  height: 877px;
+  z-index: -1;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer__columns {
+  min-height: 250px;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto 0;
+}
+
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__author {
+  bottom: 0;
+  padding: 0;
+  margin: 18px 0;
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+  background-image: url(../images/logo_place_footer.svg);
+}
+
+.footer__column-heading {
+  margin: 0;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 16px;
+}
+
+.footer__social-icon {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.footer__column-link {
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .font_one {
